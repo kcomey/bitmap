@@ -1,15 +1,20 @@
 'use strict';
 
-var fs = require('fs');
-//this file has some functions that I have exported
+//This file has the functions that I have exported
 var myBitmap = require('./bitmap_header_module.js');
 
+//This reads in the palette
 myBitmap.readPalette();
 
-var bitmap = myBitmap.transformPalette();
+//This transforms the palette
+myBitmap.transformPalette();
 
-// Write out the new file
-fs.writeFileSync('test2.bmp', bitmap, 'binary');
+//This writes out the new bitmap
+myBitmap.writePalette();
+
+
+
+
 
 
 
